@@ -41,16 +41,18 @@ public class JokeController {
 		   		"<div class='well'>\r\n" + 
 		   		"<h1>Random Joke</h1>\r\n" + 
 		   		"<br/>\r\n" + 
+		   		"<p>Personalized random Joke</p>" +
+		   		"\r\n" + 
 		   		"<form method=POST action='joke_post' onsubmit='return validate()'>\r\n" + 
 		   		"		<div class='form-group row'>\r\n" + 
 		   		"		 	<div class='col-xs-4'>\r\n" + 
-		   		"				<label for='firstName'>firstName: </label>\r\n" + 
+		   		"				<label for='firstName'>First name: </label>\r\n" + 
 		   		"		    		<input type='text' class='form-control' name='firstName' id='firstName'>\r\n" + 
 		   		"	    		</div>\r\n" + 
 		   		"	    	</div>\r\n" + 
 		   		"		<div class='form-group row'>\r\n" + 
 		   		"			<div class='col-xs-4'>\r\n" + 
-		   		"				<label for='lastName'>lastName: </label>\r\n" + 
+		   		"				<label for='lastName'>Last name: </label>\r\n" + 
 		   		"		    		<input type='text' class='form-control' name='lastName' id='lastName'>\r\n" + 
 		   		"		    	</div>\r\n" +  
 		   		"		<input type=SUBMIT value='Sumbit'>\r\n" + 
@@ -94,8 +96,20 @@ public class JokeController {
 		   		"<h1>Post Joke</h1>\r\n" + 
 		   		"<br/>\r\n" + 
 		   		"\r\n" + 
+		   		"<p>Joke:</p>" +
+	   			"\r\n" + 
 		   		joke.getJoke() + 
-		   		"<br/><br/>\r\n" + 
+		   		"<br/><br/>\r\n";
+	   		if (exists) 
+	   		{
+	   			html += "<p>Joke already exists in database</p>";
+	   		}
+	   		else 
+	   		{
+	   			html += "<p>Joke doesn't exists in database. Saved in Database!</p>";
+	   		}
+	   		html+=
+	   			"\r\n" +
 		   		"<a href='/joke'>Opnieuw</a>\r\n" + 
 		   		"</div>\r\n" + 
 		   		"\r\n" + 

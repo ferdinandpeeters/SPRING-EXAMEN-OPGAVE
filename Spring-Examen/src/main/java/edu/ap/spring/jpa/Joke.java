@@ -2,32 +2,34 @@ package edu.ap.spring.jpa;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Joke {
     @Id
-    private long databaseId;
+    @GeneratedValue
+    private long id;
 
     @Column
-    private int id;
+    private int apiID;
 
     @Column
     private String joke;
 
     public Joke() {}
     
-    public Joke(int id, String joke) {
-	    	this.id = id;
+    public Joke(int apiID, String joke) {
+	    	this.apiID = apiID;
 	    	this.joke = joke;
     }
     
-    public int getId() {
-		return id;
+    public int getApiID() {
+		return apiID;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setApiId(int apiID) {
+		this.apiID = apiID;
 	}
 
 	public String getJoke() {
