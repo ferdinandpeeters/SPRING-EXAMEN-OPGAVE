@@ -55,7 +55,7 @@ public class JokeController {
 		   		"				<label for='lastName'>Last name: </label>\r\n" + 
 		   		"		    		<input type='text' class='form-control' name='lastName' id='lastName'>\r\n" + 
 		   		"		    	</div>\r\n" +  
-		   		"		<input type=SUBMIT value='Sumbit'>\r\n" + 
+		   		"		<input type=SUBMIT value='Submit'>\r\n" + 
 		   		"</form>\r\n" + 
 		   		"\r\n" + 
 		   		"<br/><br/>\r\n" +
